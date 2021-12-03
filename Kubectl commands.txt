@@ -1,0 +1,29 @@
+Kubectl commands
+---------------------
+
+#To get the list of pods running in a namespace
+kubectl get pods -n <namespace>
+
+#To view the logs of the pod 
+kubectl logs -n <namespace> <podname>
+
+#To describe a pod
+kubectl describe pod -n <namespace>
+
+#To get inside the pod using bash
+kubectl exec -it -n <namespace> <podname> -- bash
+
+#To copy files from pod to local machine
+kubectl cp -n <namespace> <sourcepath> <destinationpath>
+
+#To delete a pod
+kubectl delete pod -n <namespace> <podname>
+
+#To list deployments in a namespace
+kubectl get deploy -n <namespace>
+
+#To delete a deployment
+kubectl delete deploy -n <namespace> <deploymentname>
+
+
+

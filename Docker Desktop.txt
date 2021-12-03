@@ -1,0 +1,25 @@
+Docker for Desktop
+
+Summary:
+
+To enable local container run time environment for a developer to perform more realistic testing of their application,
+finding and fixing bugs prior merging the code to actual project environments. The solution "Container for Desktop" provides
+a similar user experience that of platform "Docker" as a container run-time and "Kubernetes" as a conatiner orchestrator.
+
+Prerequisite:
+
+1.CWX laptop with Intel Virtualization Technology(VT-X) feature "Enabled"
+2.CWX laptop with Windows 10 Version 1803 or later.
+
+
+How-to check prerequisites are met on CWX laptop:
+1.Launch 'Task Manager' navigate to performance tab and select CPU. Observe the value of Virtualization must be "Enabled".
+2.Launch 'Power Shell' and type the command 'winver' or 'systeminfo' capture the current version.
+
+
+First Run post install - Launch twice:
+1. Post installation of Docker Desktop system must be rebooted.
+2. Post reboot, Launch Windows Start -> Docker for Windows -> Docker Desktop for first run. Allow the program to complete
+and configure your user profile. Click ok on prompt.
+3. Relaunch "Docker Desktop". Observe for whale icon on status bar. Successful run notifies "Docker Desktop is running".
+

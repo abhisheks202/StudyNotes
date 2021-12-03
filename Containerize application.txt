@@ -1,0 +1,20 @@
+Containerize the application in local Desktop
+-----------------------------------------------
+
+1. Start Docker Desktop.
+2. Clone the microservice codebase which you want to try out on Docker and Kubernetes.
+3. Create Dockerfile inside the project folder.
+A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble
+an image. When we tell Docker to build our image by executing the docker build command, Docker reads these instructions
+and execute them consecutively and create a Docker image as a result.
+4. Update the codebase with Dockerfile and add pip folder for setup.
+5. For creating image please run the below command from inside the project foler.
+docker build --tag <imagename:version>
+6. To check the images that are build so far use below command.
+docker images
+7. To run the docker image use below command
+docker run -d -p <portnumber>:<portnumber> <imagename>
+8. To verify the process running use below command
+docker ps  #it shows all running processes
+docker ps -a #it shows all processes
+
