@@ -23,3 +23,8 @@ First Run post install - Launch twice:
 and configure your user profile. Click ok on prompt.
 3. Relaunch "Docker Desktop". Observe for whale icon on status bar. Successful run notifies "Docker Desktop is running".
 
+
+Docker Commands
+----------------
+#To build a docker image
+docker build --tag <tagname> .
