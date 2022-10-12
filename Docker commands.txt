@@ -1,0 +1,59 @@
+#To build a docker image
+docker build --tag <tagname> .
+
+Eg: 
+docker build -t imagename
+
+
+#To run the docker container using different options are given below
+docker run -d -p <portnumber:portnumber> <imagename>
+
+Eg:
+docker run -d -p 8000:8000 imagename
+docker run -d --name=containername -p 8000:8000 imagename
+docker run -d -p 8000:8000 --shm-size=2gb imagename
+
+
+#To remove the docker image
+docker rmi <image>
+
+#To list runninig containers
+docker ps
+
+#To list all containers
+docker ps -a
+
+#To force remove a running container
+docker rm --force <containerid>
+
+#To list all containers that exited
+docker ps --filter "status=exited"
+
+#To view the logs of the container
+docker logs <containerid>
+
+#To inspect the details of the container
+docker inspect <containerid>
+
+#To execute a new command or create a new process inside the container
+docker exec -it <containerid> /bin/bash
+
+#To enter into a running container
+docker attach <containername>
+
+#To copy files to docker container from local system
+docker cp <from_path> <to_path>
+
+Eg:
+docker cp c:\Users\abhi\sample.txt  834456b141:\app\files
+
+
+#To run post request inside the docker container
+curl -X POST -F 'files=@smaple.txt' http://localhost:8000/file
+
+#To run docker container in a specific network
+docker run -dit --name <container_name> --network <network_name> <dockerimage>
+
+#To inspect the containers running inside a network
+docker inspect <network_name>
+
